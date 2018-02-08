@@ -1,0 +1,5 @@
+% http://tex.stackexchange.com/questions/73112
+\newcommand*{\proofContext}[1]{\def\currentprefix{proof:#1}}
+\newcommand*{\locallabel}[1]{\label{\currentprefix:#1}}
+\newcommand*{\localref}[1]{\ref{\currentprefix:#1}}
+\newcommand*{\localeqref}[1]{\eqref{\currentprefix:#1}}

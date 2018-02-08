@@ -1,0 +1,63 @@
+% https://tex.stackexchange.com/questions/371292
+
+% The "halloweenmath" package supplies some useful suroutines and also loads 
+% the "amsmath" package:
+\RequirePackage{halloweenmath}
+
+\makeatletter
+
+\newcommand*\@Roly@large@curvetie[1]{%
+  \begin{@HwM@bigop@picture}\displaystyle \textfont {6}{-3}%
+    \linethickness{#1\@HwM@thickness@units@for \textfont}%
+    \moveto(0,0)
+    \circlearc{0}{0}{3}{135}{225}%
+    \circlearc{0}{0}{3}{45}{-45}
+    \closepath
+    \strokepath
+  \end{@HwM@bigop@picture}%
+}
+\newcommand*\@Roly@Large@Curvetie{%
+  \@HwM@choose@thicknesses \@Roly@large@curvetie
+        {{}}%
+        {{1.8}}%
+}
+\newcommand*\@Roly@small@curvetie[3]{%
+  \begin{@HwM@bigop@picture}#1#2{4}{-2}%
+    \linethickness{#3\@HwM@thickness@units@for #2}%
+    \moveto(0,0)
+    \circlearc{0}{0}{2}{135}{225}%
+    \circlearc{0}{0}{2}{45}{-45}
+    \closepath
+    \strokepath
+  \end{@HwM@bigop@picture}%
+}
+\newcommand*\@Roly@Small@Curvetie[2]{%
+  \@HwM@choose@thicknesses{\@Roly@small@curvetie #1#2}%
+        {{}}%
+        {{1.6}}%
+}
+\newcommand*\@Roly@binop@curvetie[3]{%
+  \begin{@HwM@oplus@picture}#1#2{2.8284271}{-1.4142135}%
+    \linethickness{#3\@HwM@thickness@units@for #2}%
+    \moveto(0,0)
+    \circlearc{0}{0}{1.4142135}{135}{225}%
+    \circlearc{0}{0}{1.4142135}{45}{-45}
+    \closepath
+    \strokepath
+  \end{@HwM@oplus@picture}%
+}
+\newcommand*\@Roly@Binop@Curvetie[2]{%
+  \@HwM@choose@thicknesses{\@Roly@binop@curvetie #1#2}%
+        {{}}%
+        {{1.5}}%
+}
+\newcommand*\curvetie{%
+  \DOTSB
+  \@HwM@general@binary@operation \@Roly@Binop@Curvetie
+}
+\newcommand*\bigcurvetie{%
+  \DOTSB
+  \@HwM@general@large@operator \@Roly@Large@Curvetie \@Roly@Small@Curvetie
+}
+
+\makeatother

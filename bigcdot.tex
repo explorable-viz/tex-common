@@ -1,0 +1,5 @@
+% http://tex.stackexchange.com/questions/235118
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.7}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother

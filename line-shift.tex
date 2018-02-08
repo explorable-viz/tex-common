@@ -1,0 +1,11 @@
+% shift left, shift right line styles.
+
+\usetikzlibrary{decorations}
+\pgfdeclaredecoration{simple line}{initial}{
+  \state{initial}[width=\pgfdecoratedpathlength-1sp]{\pgfmoveto{\pgfpointorigin}}
+  \state{final}{\pgflineto{\pgfpointorigin}}
+}
+\tikzset{
+   shift left/.style={decorate,decoration={simple line,raise=#1}},
+   shift right/.style={decorate,decoration={simple line,raise=-1*#1}},
+}

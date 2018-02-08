@@ -1,0 +1,20 @@
+% Not needed for llncs.sty or acmart.cls.
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{definition}{Definition}[subsection]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+
+% http://tex.stackexchange.com/questions/43966
+\makeatletter
+\def\th@plain{%
+  \thm@notefont{}% same as heading font
+  \itshape % body font
+}
+\def\th@definition{%
+  \thm@notefont{}% same as heading font
+  \normalfont % body font
+}
+\makeatother

@@ -1,0 +1,10 @@
+% http://tex.stackexchange.com/questions/360021
+\makeatletter
+\DeclareRobustCommand{\reloverrideleft}{\mathrel{\mathpalette\rel@override\vartriangleleft}}
+\DeclareRobustCommand{\reloverrideright}{\mathrel{\mathpalette\rel@override\vartriangleright}}
+
+\newcommand{\rel@override}[2]{%
+  \vphantom{#2}%
+  \ooalign{$\m@th#1-$\cr$\m@th#1#2$}%
+}
+\makeatother

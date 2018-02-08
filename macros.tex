@@ -1,0 +1,192 @@
+% Macros which I'd like to be shared/stable across projects.
+
+\newcommand*{\lambdaCalculus}{$\lambda$-calculus\xspace}
+\newcommand*{\lambdaCalculi}{$\lambda$-calculi\xspace}
+\newcommand*{\piCalculus}{$\pi$-calculus\xspace}
+\newcommand*{\piCalculi}{$\pi$-calculi\xspace}
+
+% Misc.
+\newcommand*{\etal}{et al\xspace}
+\newcommand*{\ala}{\emph{\`a la}\xspace}
+
+% Housekeeping.
+\newcommand*{\todo}[1]{\textcolor{red}{\textit{#1}}}
+
+% Formatting.
+\newcommand*{\ttt}[1]{\texttt{#1}}
+\newcommand*{\kw}[1]{{\text{\tt{#1}}}} % is this different from \ttt?
+
+% http://tex.stackexchange.com/questions/46690
+\DeclareTextFontCommand{\textbfit}{%
+  \fontseries\bfdefault % change series without selecting the font yet
+  \itshape
+}
+
+% Misc math.
+\newcommand*{\after}{\circ}
+\newcommand*{\Dom}[1]{\textsf{dom}\;#1}
+\newcommand*{\dom}[1]{\textsf{dom}(#1)}
+\newcommand*{\ran}[1]{\textsf{ran}(#1)}
+\newcommand*{\codom}[1]{\textsf{codom}{(#1)}}
+\newcommand*{\domrestrict}[2]{#1{\mid_{#2}}}
+\newcommand*{\eqdef}{\stackrel{\smash{\text{\tiny def}}}{=}}
+\newcommand*{\judge}{\Longrightarrow}
+\newcommand*{\plusplus}{\ensuremath{\mathbin{+\mkern-10mu+}}}
+\newcommand*{\disjoint}{\#}
+\newcommand*{\disjunion}{\uplus}
+\newcommand*{\Cdot}{\raisebox{-0.25ex}{\scalebox{1.4}{$\cdot$}}}
+\newcommand*{\set}[1]{\{#1\}}
+\newcommand*{\family}[3]{\set{#1}_{#2\in#3}}
+\newcommand*{\abs}[1]{|#1|}
+\newcommand*{\tensor}{\otimes}
+\newcommand*{\EmptySet}{\varnothing}
+\newcommand*{\iso}{\cong}
+
+% Projections.
+\newcommand*{\projOne}[1]{\ensuremath{{\pi_1}\,#1}}
+\newcommand*{\projTwo}[1]{\ensuremath{{\pi_2}\,#1}}
+
+% Option/Maybe.
+\newcommand*{\optSome}[1]{\textsf{some}\;{#1}}
+\newcommand*{\optNone}[0]{\textsf{none}}
+
+% Relational composition.
+\DeclareSymbolFont{bbsymbol}{U}{bbold}{m}{n}
+\DeclareMathSymbol{\bbsemi}{\mathbin}{bbsymbol}{"3B}
+
+% Lattices.
+\newcommand*{\join}{\sqcup}
+\newcommand*{\meet}{\sqcap}
+\newcommand*{\bigjoin}{\bigsqcup}
+\newcommand*{\bigmeet}{\bigsqcap}
+
+% Linear logic (\with doesn't work for me and \parr looks silly).
+\newcommand*{\LLpar}{\rotatebox[origin=c]{180}{\LLwith}}
+\newcommand*{\LLplus}{\oplus}
+\newcommand*{\LLtimes}{\otimes}
+\newcommand*{\LLwith}{\text{\&}}
+
+% (Implicit?) indices
+\newcommand*{\lowlight}[1]{\textcolor{darkgray}{#1}}
+\newcommand*{\sub}[2]{#1_{\lowlight{#2}}}
+\renewcommand*{\sup}[2]{#1^{\lowlight{#2}}}
+
+\renewcommand*{\vdots}{\MnSymbolvdots}
+\newcommand*{\param}{\cdot}
+
+% Cross-referencing.
+\newcommand*{\appref}[1]{Appendix~\ref{app:#1}}
+\newcommand*{\corref}[1]{Corollary~\ref{cor:#1}}
+\newcommand*{\defref}[1]{Definition~\ref{def:#1}}
+\newcommand*{\Defref}[1]{Definition~\ref{def:#1} (\nameref{def:#1})}
+\newcommand*{\DefrefShort}[1]{\ref{def:#1} (\nameref{def:#1})}
+\newcommand*{\defrefTwo}[2]{Definitions~\ref{def:#1} and \ref{def:#2}}
+\newcommand*{\eqnref}[1]{Equation~\ref{eqn:#1}}
+\newcommand*{\eqnrefShort}[1]{Eqn.~\ref{eqn:#1}}
+\newcommand*{\eqnrefTwo}[2]{Equations~\ref{eqn:#1} and \ref{eqn:#2}}
+\newcommand*{\exref}[1]{Example~\ref{ex:#1}}
+\newcommand*{\exrefTwo}[2]{Examples~\ref{ex:#1} and \ref{ex:#2}}
+\newcommand*{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand*{\figrefTwo}[2]{Figures \ref{fig:#1} and \ref{fig:#2}}
+\newcommand*{\figrefThree}[3]{Figures \ref{fig:#1}, \ref{fig:#2} and \ref{fig:#3}}
+\newcommand*{\lemref}[1]{Lemma~\ref{lem:#1}}
+\newcommand*{\Lemref}[1]{Lemma~\ref{lem:#1} (\nameref{lem:#1})}
+\newcommand*{\LemrefShort}[1]{\ref{lem:#1} (\nameref{lem:#1})}
+\newcommand*{\lemrefTwo}[2]{Lemmas~\ref{lem:#1} and \ref{lem:#2}}
+\newcommand*{\lemrefThree}[3]{Lemmas \ref{lem:#1}, \ref{lem:#2} and \ref{lem:#3}}
+\newcommand*{\lemrefFour}[4]{Lemmas \ref{lem:#1}, \ref{lem:#2}, \ref{lem:#3} and \ref{lem:#4}}
+\newcommand*{\lstref}[1]{Listing~\ref{lst:#1}}
+\newcommand*{\secref}[1]{Section~\ref{sec:#1}}
+\newcommand*{\secrefTwo}[2]{Sections~\ref{sec:#1} and \ref{sec:#2}}
+\newcommand*{\Secref}[1]{\S\,\ref{sec:#1}}
+\newcommand*{\SecrefTwo}[2]{\S\S\,\ref{sec:#1} and \ref{sec:#2}}
+\newcommand*{\thmref}[1]{Theorem~\ref{thm:#1}}
+\newcommand*{\Thmref}[1]{Theorem~\ref{thm:#1} (\nameref{thm:#1})}
+\newcommand*{\thmrefTwo}[2]{Theorems~\ref{thm:#1} and \ref{thm:#2}}
+
+% Environments.
+\newenvironment{nop}{}{}
+\newenvironment{sdisplaymath}
+   {\begin{nop}\small\begin{displaymath}}
+   {\end{displaymath}\end{nop}\ignorespacesafterend}
+\newenvironment{smathpar}
+   {\begin{nop}\small\begin{mathpar}}
+   {\end{mathpar}\end{nop}\ignorespacesafterend}
+\newenvironment{salign}
+   {\par\nobreak\small\noindent\csname align*\endcsname}
+   {\csname endalign*\endcsname}
+\newenvironment{sqitemize}
+    {\begin{itemize}[label=$\sqbullet$]}
+    {\end{itemize}}
+
+% Figures.
+\newenvironment{mathfig}{\begin{sdisplaymath}}{\end{sdisplaymath}}
+\newenvironment{syntaxfig}{\begin{mathfig}\begin{array}{@{}l@{\quad}r@{~~}c@{\quad}ll}}{\end{array}\end{mathfig}}
+
+% Sub-floats.
+\makeatletter
+\newbox\sf@box
+\newenvironment{SubFloat}[2][]%
+  {\def\sf@one{#1}%
+   \def\sf@two{#2}%
+   \setbox\sf@box\hbox
+      \bgroup}%
+  { \egroup
+   \ifx\@empty\sf@two\@empty\relax
+     \def\sf@two{\@empty}
+   \fi
+   \ifx\@empty\sf@one\@empty\relax
+      \subfloat[\sf@two]{\box\sf@box}%
+   \else
+      \subfloat[\sf@one][\sf@two]{\box\sf@box}%
+   \fi}
+\makeatother
+
+% Shaded box.
+\definecolor{highlightcolor}{rgb}{1.0,0.8,0.8}
+\definecolor{shadecolor}{rgb}{0.9,0.9,0.9}
+\definecolor{lightgray}{rgb}{0.8,0.8,0.8}
+% Previous definition using \strut was somewhat unpredictable. See http://tex.stackexchange.com/questions/86569.
+% \newcommand*{\shadebox}[1]{\fcolorbox{lightgray}{shadecolor}{\strut{#1}}}
+\newcommand*{\shadebox}[1]{\fcolorbox{lightgray}{shadecolor}{\raisebox{0pt}[0.60\baselineskip][0.05\baselineskip]{#1}}}
+
+% Inference rules.
+\newenvironment{ruleblock}[1]{%
+\begin{flushleft}\shadebox{$#1$}\end{flushleft}\begin{smathpar}}{\end{smathpar}%
+}
+
+\newcommand*{\ruleName}[1]{\textnormal{\textsf{#1}}}
+
+% See http://tex.stackexchange.com/questions/171810/
+\newcommand*\first[1]{\mathchoice{#1^\prime}{#1^\prime}{#1^\prime}%
+   {#1^{\scalebox{.7}{$\scriptscriptstyle\prime$}}}
+}
+
+% https://tex.stackexchange.com/questions/21644.
+\makeatletter
+\newcommand{\superimpose}[2]{%
+  {\ooalign{$#1\@firstoftwo#2$\cr\hfil$#1\@secondoftwo#2$\hfil\cr}}}
+\makeatother
+
+% This doesn't work properly. Use \Center below instead.
+% http://tex.stackexchange.com/questions/98839
+\newenvironment{nscenter}
+ {\parskip=0pt\par\nopagebreak\centering}
+ {\par\noindent\ignorespacesafterend}
+
+% https://tex.stackexchange.com/questions/24186
+\newcommand{\Center}[1]{\makebox[\textwidth]{#1}}
+
+\newcommand*{\xrightarrowdbl}[2][]{%
+  \xrightarrow[#1]{#2}\mathrel{\mkern-15mu}\rightarrow
+}
+
+% http://tex.stackexchange.com/questions/295635
+\newsavebox{\vardisplaymathbox}
+\newenvironment{vardisplaymath}[1][\small]
+  {\begin{displaymath}\begin{lrbox}{\vardisplaymathbox}
+   #1$\displaystyle}
+  {$\end{lrbox}\usebox{\vardisplaymathbox}\end{displaymath}%
+    \ignorespacesafterend}
+
+\newcommand{\crossrule}{\noindent\textcolor{lightgray}{\cleaders\hbox{.}\hfill}}
