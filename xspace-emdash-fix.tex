@@ -1,0 +1,17 @@
+% https://tex.stackexchange.com/questions/263271
+\xspaceremoveexception{-}
+\makeatletter
+\renewcommand*\@xspace@hook{%
+\ifx\@let@token-%
+\expandafter\@xspace@dash@i
+\fi
+}
+\def\@xspace@dash@i-{\futurelet\@let@token\@xspace@dash@ii}
+\def\@xspace@dash@ii{%
+\ifx\@let@token-%
+\else
+\unskip
+\fi
+-%
+}
+\makeatother
