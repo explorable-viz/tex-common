@@ -1,2 +1,1 @@
-# tex-common
-Common LaTeX utilities
+Common LaTeX utilities, plus shared bibliography file.
