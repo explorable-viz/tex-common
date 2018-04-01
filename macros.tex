@@ -25,28 +25,28 @@
 }
 
 % Misc math.
+\newcommand*{\abs}[1]{|#1|}
 \newcommand*{\after}{\circ}
-\newcommand*{\Dom}[1]{\textsf{dom}\;#1}
-\newcommand*{\dom}[1]{\textsf{dom}(#1)}
-\newcommand*{\ran}[1]{\textsf{ran}(#1)}
-\newcommand*{\codom}[1]{\textsf{codom}{(#1)}}
-\newcommand*{\domrestrict}[2]{#1{\mid_{#2}}}
-\newcommand*{\eqdef}{\stackrel{\smash{\text{\tiny def}}}{=}}
-\newcommand*{\judge}{\Longrightarrow}
-\newcommand*{\plusplus}{\ensuremath{\mathbin{+\mkern-10mu+}}}
 \newcommand*{\disjoint}{\#}
 \newcommand*{\disjunion}{\uplus}
 \newcommand*{\Cdot}{\raisebox{-0.25ex}{\scalebox{1.4}{$\cdot$}}}
-\newcommand*{\set}[1]{\{#1\}}
-\newcommand*{\Set}[1]{\mathsf{#1}}
-\newcommand*{\bigset}[1]{\left\{#1\right\}}
-\newcommand*{\family}[3]{\set{#1}_{#2\in#3}}
-\newcommand*{\abs}[1]{|#1|}
-\newcommand*{\tensor}{\otimes}
-\newcommand*{\EmptySet}{\varnothing}
-\newcommand*{\iso}{\cong}
+\newcommand*{\codom}[1]{\textsf{codom}{(#1)}}
 \DeclareRobustCommand{\Concat}{\mathbin{\Cdot}} % http://tex.stackexchange.com/questions/272554
 \newcommand*{\concat}{\cdot}
+\newcommand*{\Dom}[1]{\textsf{dom}\;#1}
+\newcommand*{\dom}[1]{\textsf{dom}(#1)}
+\newcommand*{\domrestrict}[2]{#1{\mid_{#2}}}
+\newcommand*{\EmptySet}{\varnothing}
+\newcommand*{\eqdef}{\stackrel{\smash{\text{\tiny def}}}{=}}
+\newcommand*{\family}[3]{\set{#1}_{#2\in#3}}
+\newcommand*{\iso}{\cong}
+\newcommand*{\judge}{\Longrightarrow}
+\newcommand*{\maps}[2]{#1 \mapsto #2}
+\newcommand*{\maplet}[2]{\set{\maps{#1}{#2}}}
+\newcommand*{\plusplus}{\ensuremath{\mathbin{+\mkern-10mu+}}}
+\newcommand*{\ran}[1]{\textsf{ran}(#1)}
+\newcommand*{\set}[1]{\{#1\}}
+\newcommand*{\tensor}{\otimes}
 
 % Projections.
 \newcommand*{\projOne}[1]{\ensuremath{{\pi_1}\,#1}}
