@@ -174,14 +174,15 @@
   {\ooalign{$#1\@firstoftwo#2$\cr\hfil$#1\@secondoftwo#2$\hfil\cr}}}
 \makeatother
 
-% This doesn't work properly. Use \Center below instead.
+% This doesn't work properly. Use \NSCenter below instead.
 % http://tex.stackexchange.com/questions/98839
 \newenvironment{nscenter}
  {\parskip=0pt\par\nopagebreak\centering}
  {\par\noindent\ignorespacesafterend}
 
 % https://tex.stackexchange.com/questions/24186
-\newcommand{\Center}[1]{\makebox[\textwidth]{#1}}
+% Was previously called \Center but that clashes with ragged2e package.
+\newcommand{\NSCenter}[1]{\makebox[\textwidth]{#1}}
 
 \newcommand*{\xrightarrowdbl}[2][]{%
   \xrightarrow[#1]{#2}\mathrel{\mkern-15mu}\rightarrow
