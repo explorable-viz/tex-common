@@ -1,0 +1,100 @@
+% http://tex.stackexchange.com/questions/82535
+\newenvironment{proofalign}{\par\nobreak\small\noindent\flalign}{\endflalign}
+
+\newcommand*{\proseDescription}{\paragraph{Prose description.}}
+\newcommand*{\paragraphCase}[1]{\paragraph{\uline{#1}}}
+
+\newcommand*{\absurd}[1]{\Absurd{\uline{#1}}}
+\newcommand*{\Absurd}[1]{\textcolor{red}{#1}}
+\newcommand*{\contradiction}{\Absurd{\bot}}
+\newcommand*{\qedLocal}{\text{\ding{234}}\;}
+
+\setlength{\ULdepth}{0.25em}
+\newcommand*{\interCaseZero}[1]{%
+& \textbf{\emph{Case}}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interCaseOne}[1]{%
+& \indent \textbf{\emph{Case}}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interCaseTwo}[1]{%
+& \indent\indent \textbf{\emph{Case}}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interSubcaseZero}[1]{%
+& \textbf{$\sqbullet$}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interSubcaseOne}[1]{%
+& \indent \textbf{$\sqbullet$}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interSubcaseTwo}[1]{%
+& \indent\indent \textbf{$\sqbullet$}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interSubcaseThree}[1]{%
+& \indent\indent\indent \textbf{$\sqbullet$}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interSubcaseFour}[1]{%
+& \indent\indent\indent\indent \textbf{$\sqbullet$}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interSubcaseFive}[1]{%
+& \indent\indent\indent\indent\indent \textbf{$\sqbullet$}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interSubcaseSix}[1]{%
+& \indent\indent\indent\indent\indent\indent \textbf{$\sqbullet$}\ \uline{#1}.& %
+\\[0.25em]%
+}
+\newcommand*{\interSubcaseSeven}[1]{%
+& \indent\indent\indent\indent\indent\indent\indent \textbf{$\sqbullet$}\ \uline{#1}.& %
+\\[0.25em]%
+}
+
+\newcommand*{\introCaseDerivationZero}[2]{%
+& \textbf{\emph{Case}}\ %
+\begin{adjustbox}{varwidth=#1}%
+#2
+\end{adjustbox}%
+}
+
+\newcommand*{\introCaseZero}[1]{%
+& \textbf{\emph{Case}}\ \uline{#1}.\;%
+}
+
+\newcommand*{\introSubcaseZero}[1]{%
+& \textbf{$\sqbullet$}\ \uline{#1}.\;%
+}
+\newcommand*{\introSubcaseOne}[1]{%
+& \indent \textbf{$\sqbullet$}\ \uline{#1}.\;%
+}
+\newcommand*{\introSubcaseTwo}[1]{%
+& \indent\indent \textbf{$\sqbullet$}\ \uline{#1}.\;%
+}
+\newcommand*{\introSubcaseThree}[1]{%
+& \indent\indent\indent \textbf{$\sqbullet$}\ \uline{#1}.\;%
+}
+\newcommand*{\introSubcaseFour}[1]{%
+& \indent\indent\indent\indent \textbf{$\sqbullet$}\ \uline{#1}.\;%
+}
+\newcommand*{\introSubcaseFive}[1]{%
+& \indent\indent\indent\indent\indent \textbf{$\sqbullet$}\ \uline{#1}.\;%
+}
+
+\def\derivationWidth{0.4\textwidth}
+
+\newcommand*{\caseDerivation}[2]{%
+\textbf{\emph{Case}}\ %
+\begin{adjustbox}{varwidth=#1}%
+#2
+\end{adjustbox}%
+}
+\newcommand*{\derivation}[2]{%
+\begin{adjustbox}{varwidth=#1}%
+#2
+\end{adjustbox}%
+}
