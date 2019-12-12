@@ -125,6 +125,10 @@
 \newenvironment{sqitemize}
     {\begin{itemize}[label=$\sqbullet$]}
     {\end{itemize}}
+% https://tex.stackexchange.com/questions/501182
+\newenvironment{tblsqitemize}
+    {\begin{itemize}[label=$\sqbullet$,after=\vspace*{-\baselineskip}]}
+    {\end{itemize}}
 
 % Figures.
 \newenvironment{mathfig}{\begin{sdisplaymath}}{\end{sdisplaymath}}
