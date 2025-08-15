@@ -9107,3 +9107,113 @@ isbn="978-3-540-69201-0"
   pages={359--370},
   year={1994}
 }
+
+@inproceedings{Yulan_2023,
+author = {He, Yulan},
+title = {Interpretable Natural Language Understanding},
+year = {2023},
+isbn = {9798400701245},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3583780.3615315},
+doi = {10.1145/3583780.3615315},
+abstract = {In recent years, we have witnessed the shift of paradigms in Natural Language Processing (NLP) from fine-tuning large-scale pre-trained language models (PLMs) on task-specific data to prompt-based learning. In the latter, the task description is embedded into the PLM input, enabling the same model to handle multiple tasks. While both approaches have demonstrated impressive performance in various NLP tasks, their opaque nature makes comprehending their inner workings and decision-making processes challenging for humans.In this talk, I will share the research undertaken in my group to address the interpretability concerns surrounding neural models in language understanding. This includes a hierarchical interpretable text classifier going beyond word-level interpretations, uncertainty interpretation of text classifiers built on PLMs, explainable recommender systems by harnessing information across diverse modalities, and explainable student answer scoring. I will conclude my talk by offering insights into potential future developments in interpretable language understanding.},
+booktitle = {Proceedings of the 32nd ACM International Conference on Information and Knowledge Management},
+pages = {1–2},
+numpages = {2},
+keywords = {model interpretation, pre-trained language models, rationale generation, recommender systems, student answer scoring, uncertainty interpretation},
+location = {Birmingham, United Kingdom},
+series = {CIKM '23}
+}
+
+@inproceedings{bolucu-etal-2023-investigating,
+title = "Investigating the Impact of Syntax-Enriched Transformers on Quantity Extraction in Scientific Texts",
+author = {B{\"o}l{\"u}c{\"u}, Necva  and
+      Rybinski, Maciej  and
+      Wan, Stephen},
+editor = "Ghosal, Tirthankar  and
+      Grezes, Felix  and
+      Allen, Thomas  and
+      Lockhart, Kelly  and
+      Accomazzi, Alberto  and
+      Blanco-Cuaresma, Sergi",
+booktitle = "Proceedings of the Second Workshop on Information Extraction from Scientific Publications",
+month = nov,
+year = "2023",
+address = "Bali, Indonesia",
+publisher = "Association for Computational Linguistics",
+url = "https://aclanthology.org/2023.wiesp-1.1/",
+doi = "10.18653/v1/2023.wiesp-1.1",
+pages = "1--13"
+}
+
+@inproceedings{abu-ahmad-etal-2025-climatecheck-shared,
+title = "The {C}limate{C}heck Shared Task: Scientific Fact-Checking of Social Media Claims about Climate Change",
+author = "Abu Ahmad, Raia  and
+      Usmanova, Aida  and
+      Rehm, Georg",
+editor = "Ghosal, Tirthankar  and
+      Mayr, Philipp  and
+      Singh, Amanpreet  and
+      Naik, Aakanksha  and
+      Rehm, Georg  and
+      Freitag, Dayne  and
+      Li, Dan  and
+      Schimmler, Sonja  and
+      De Waard, Anita",
+booktitle = "Proceedings of the Fifth Workshop on Scholarly Document Processing (SDP 2025)",
+month = jul,
+year = "2025",
+address = "Vienna, Austria",
+publisher = "Association for Computational Linguistics",
+url = "https://aclanthology.org/2025.sdp-1.24/",
+doi = "10.18653/v1/2025.sdp-1.24",
+pages = "263--275",
+ISBN = "979-8-89176-265-7",
+abstract = "Misinformation in public discourse on global and significant issues like climate change is often facilitated through social media. However, current systems do not address fact-checking climate-related claims against trustworthy, evidence-based sources, such as scientific publications. We organised the ClimateCheck shared task at the 5th Scholarly Document Processing (SDP) Workshop, co-located with ACL 2025 in Vienna, Austria. The task featured two subtasks: 1. Abstracts retrieval given a claim, and 2. Claim verification based on the retrieved abstract. ClimateCheck had 27 registered users with active participation from 13 teams, ten of which submitted results for the first subtask and three for the second. The winning team achieved a Recall@10 score of 0.66 and a Binary Preference score of 0.49 for subtask I, and an F1 score of 0.73 for subtask II. Their method combined sparse retrieval using BM25, an ensemble of fine-tuned cross-encoder models using BGE-rerankers, and large language models for classification."
+}
+
+@inproceedings{bi-etal-2024-iterative,
+title = "Iterative Refinement of Project-Level Code Context for Precise Code Generation with Compiler Feedback",
+author = "Bi, Zhangqian  and
+      Wan, Yao  and
+      Wang, Zheng  and
+      Zhang, Hongyu  and
+      Guan, Batu  and
+      Lu, Fangxin  and
+      Zhang, Zili  and
+      Sui, Yulei  and
+      Jin, Hai  and
+      Shi, Xuanhua",
+editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+booktitle = "Findings of the Association for Computational Linguistics: ACL 2024",
+month = aug,
+year = "2024",
+address = "Bangkok, Thailand",
+publisher = "Association for Computational Linguistics",
+url = "https://aclanthology.org/2024.findings-acl.138/",
+doi = "10.18653/v1/2024.findings-acl.138",
+pages = "2336--2353",
+abstract = "Large Language Models (LLMs) have shown remarkable progress in automated code generation. Yet, LLM-generated code may contain errors in API usage, class, data structure, or missing project-specific information. As much of this project-specific context cannot fit into the prompts of LLMs, we must find ways to allow the model to explore the project-level code context. We present CoCoGen, a new code generation approach that uses compiler feedback to improve the LLM-generated code. CoCoGen first leverages static analysis to identify mismatches between the generated code and the project{'}s context. It then iteratively aligns and fixes the identified errors using information extracted from the code repository. We integrate CoCoGen with two representative LLMs, i.e., GPT-3.5-Turbo and Code Llama (13B), and apply it to Python code generation. Experimental results show that CoCoGen significantly improves the vanilla LLMs by over 80{\%} in generating code dependent on the project context and consistently outperforms the existing retrieval-based code generation baselines."
+}
+
+@article{cycle_2024,
+author = {Ding, Yangruibo and Min, Marcus J. and Kaiser, Gail and Ray, Baishakhi},
+title = {CYCLE: Learning to Self-Refine the Code Generation},
+year = {2024},
+issue_date = {April 2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {8},
+number = {OOPSLA1},
+url = {https://doi.org/10.1145/3649825},
+doi = {10.1145/3649825},
+abstract = {Pre-trained code language models have achieved promising performance in code generation and improved the programming efficiency of human developers. However, their self-refinement capability is typically overlooked by the existing evaluations of code LMs, which focus only on the accuracy of the one-time prediction. For the cases when code LMs fail to implement the correct program, developers actually find it hard to debug and fix the faulty prediction since it is not written by the developers themselves. Unfortunately, our study reveals that code LMs cannot efficiently self-refine their faulty generations as well.In this paper, we propose Cycle framework, learning to self-refine the faulty generation according to the available feedback, such as the execution results reported by the test suites. We evaluate Cycle on three popular code generation benchmarks, HumanEval, MBPP, and APPS. The results reveal that Cycle successfully maintains, sometimes improves, the quality of one-time code generation, while significantly improving the selfrefinement capability of code LMs. We implement four variants of Cycle with varied numbers of parameters across 350M,1B,2B, and 3B, and the experiments show that Cycle consistently boosts the code generation performance, by up to 63.5\%, across benchmarks and varied model sizes. We also notice that Cycle outperforms code LMs that have 3\texttimes{} more parameters in self-refinement.},
+journal = {Proc. ACM Program. Lang.},
+month = apr,
+articleno = {108},
+numpages = {27},
+keywords = {Code Language Models, Source Code Modeling, Code Generation, Iterative Programming}
+}
